@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grid</title>
+    <style type="text/css">
+        :root{
+            --blau:#00AFD7;
+            --vermell:#FF3300;
+            --groc:#FFCD00;
+            --gris:#EEEEEE;
+        }
+        @font-face{
+            font-family: MoMA Sans;
+            src: url(https://www.moma.org/dist/moma-sans/moma-sans__bold.woff2);
+            font-style: bold;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: 'MoMA', sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);            
+            grid-template-rows: repeat(4, 250px);            
+        }
+        .expos{
+            font-weight: 900;
+            
+            overflow: hidden;                       
+        }
+        .expos img{
+            object-fit: cover;
+            object-position: center center;
+            height: 100%;
+        }
+        .el1{
+            background: #00afd7; 
+        }
+        .el4{
+            background: var(--groc);            
+        }
+        .el5{
+            background: black;
+            color: white;
+        }
+        .el8{
+            background: var(--gris);
+        }
+        .el1, .el4, .el5, .el8{
+            grid-column: span 2;
+            padding: 2em 4em;
+            display: flex;
+            flex-direction: column;
+        }
+        .el2, .el3, .el6, .el7{
+            grid-column: span 3;
+        }
+        h1{
+            font-size: 2.5em;
+            line-height: 0.97em;
+            display: flex;
+            flex-grow: 1;
+        }
+        h2{
+            font-size: 1em;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="expos el1">
+            <h1>A new MoMA-our reimagined museum is here</h1>
+            <h2>Learn more MoMA</h2>
+        </div>
+        <div class="expos el2">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="expos el3">
+            <img src="img/2.jpg" alt="">
+        </div>
+        <div class="expos el4">
+            <h1>In the galleries</h1>
+            <h2>Learn more MoMA</h2>
+        </div>
+        <div class="expos el5">
+            <h1>Theater of Operations: The Gulf Wars 1991-2011</h1>
+            <h2>Through March 1, 2020 MoMa PS1</h2>
+        </div>
+        <div class="expos el6">
+            <img src="img/3.jpg" alt="">
+        </div>
+        <div class="expos el7">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <div class="expos el8">
+            <h1>Give good design</h1>
+            <h2>Shop 20%off MoMA Design Store</h2>
+        </div>
+    </div>
+</body>
+</html>
